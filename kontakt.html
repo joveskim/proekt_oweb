@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Контакт</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+
+    <body class="kontaktbody">
+        <header>
+            <section class="mjheader" style="background-color: white;">
+                <p class="logo">
+                    <img src="images/mjlogocyan.jpg" alt="mjlogo" width="150px" height="90px">
+                </p>
+                <section style="position: absolute; padding-left: 88.1%; padding-top: 0.1%;">
+                    <input type="search" placeholder="Search">
+                </section> 
+                <section class="menu">
+                    <img src="images/menu.png" alt="menu" width="40px" height="30px">
+                </section>
+                <section class="navheader">
+                    <a href="kontakt.html" style="margin-right: 50px;">Контакт</a>
+                    <a href="anketa.html">Анкета за посетителите</a>
+                    <a href="blog.html">Блог</a>
+                    <a href="insta.html">Галерија</a>
+                    <a href="omileni.html">Омилени нешта</a>
+                    <a href="doma.html">Дома</a>
+                </section>
+            </section>
+        </header>
+
+        <section class="social">
+            <a href="https://www.facebook.com/macedonian.imperator">
+                <img src="images/facebooklogo.svg" alt="martin's facebook" width="40" height="40">
+            </a>
+            <a href="https://www.instagram.com/joveskim">
+                <img src="images/instalogo.svg" alt="martin's instagram" width="40" height="40">
+            </a>
+        </section>
+
+        <div class="divkontakt">
+            <form method="post" action="kontaktsent.html" autocomplete="on" class="forma1">
+                <h1 class="naslov1">
+                    Исконтактирајте ме!
+                </h1>
+
+                <section style="float: left;">
+                    <input type="hidden" name="receiver" value="joveskim@gmail.com">
+
+                    <p>
+                        <label>Име*<br>
+                            <input name="Name" type="text" placeholder="Name" size="25" maxlength="30" autofocus required>
+                        </label>
+                    </p>
+                    <p>
+                        <label>Скратено име<br>
+                            <input name="Shortname" type="email" placeholder="Short name" size="25" maxlength="30">
+                        </label>                   
+                    </p>
+                    <p>
+                        <label>Презиме*<br>
+                            <input name="Surename" type="text" placeholder="Surename" size="25" maxlength="30" required>
+                        </label>
+                    </p>
+                    <p>
+                        <label>Вашиот е-маил*<br>
+                            <input name="Email" type="email" placeholder="Email" size="25" maxlength="30" required>
+                        </label>                   
+                    </p>
+                    <p>
+                        <label>Вашиоt телефонски број*<br>
+                            <input name="tel" type="tel" pattern="\d{3} +\d{3} +\d{3}" placeholder="070 000 000" size="25" maxlength="30" required> пр: 070 000 000
+                        </label>                   
+                    </p>
+                    
+                    <p style="color: gray;">
+                        * значи дека полето е задолжително за внесување                
+                    </p>
+                    <p>
+                        <input name="Submit" type="submit" placeholder="iadsds">
+                        <input name="Clear" type="reset">
+                    </p>
+                </section>
+                
+                <section style="float: right; padding-right: 50px;">
+                    <p>
+                        <label>Порака*<br><br>
+                            <textarea name="Message" rows="15" cols="30" placeholder="Your message" required></textarea>
+                        </label>                   
+                    </p>
+                </section>
+            </form>
+
+            <section class="forma2">
+                <h1 class="naslov1">
+                    Други опции за контакт
+                </h1>
+                <p class="kontaktf2">
+                    <a href="https://www.facebook.com/macedonian.imperator">
+                        <img src="images/facebooklogo.svg" alt="martin's facebook" width="60" height="60">
+                    </a>
+                    <a href="https://www.instagram.com/joveskim" style="padding-left: 40px;">
+                        <img src="images/instalogo.svg" alt="martin's instagram" width="60" height="60">
+                    </a>
+                    <a href="https://twitter.com/joveskim" style="padding-left: 40px;">
+                        <img src="images/twitterlogo.svg" alt="martin's twitter" width="50" height="50">
+                    </a>
+                </p>
+                <hr>
+                <p>
+                    <p style="text-align: center; padding-top: 5px; font-size: 18px;">
+                        <strong>Е-маил:</strong> 
+                        <a href="mailto:joveskim@gmail.com" class="kontaktf3">joveskim@gmail.com</a>
+                    </p>
+                    <p style="text-align: center; padding-top: 5px; font-size: 18px;">
+                        <strong>Мобилен:</strong>
+                        <a href="tel:+38976737566" class="kontaktf3">+389 (0)76 737-566</a>
+                    </p>
+                    
+                    
+                </p>
+            </section>
+        </div>
+    </body>
+</html>

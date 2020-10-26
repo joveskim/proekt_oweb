@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Анкета</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+
+    <body class="kontaktbody">
+        <header>
+            <section class="mjheader" style="background-color: white;">
+                <p class="logo">
+                    <img src="images/mjlogocyan.jpg" alt="mjlogo" width="150px" height="90px">
+                </p>
+                <section style="position: absolute; padding-left: 88.1%; padding-top: 0.1%;">
+                    <input type="search" placeholder="Search">
+                </section> 
+                <section class="menu">
+                    <img src="images/menu.png" alt="menu" width="40px" height="30px">
+                </section>
+                <section class="navheader">
+                    <a href="kontakt.html" style="margin-right: 50px;">Контакт</a>
+                    <a href="anketa.html">Анкета за посетителите</a>
+                    <a href="blog.html">Блог</a>
+                    <a href="insta.html">Галерија</a>
+                    <a href="omileni.html">Омилени нешта</a>
+                    <a href="doma.html">Дома</a>
+                </section>
+            </section>
+        </header>
+
+        <section class="social">
+            <a href="https://www.facebook.com/macedonian.imperator">
+                <img src="images/facebooklogo.svg" alt="martin's facebook" width="40" height="40">
+            </a>
+            <a href="https://www.instagram.com/joveskim">
+                <img src="images/instalogo.svg" alt="martin's instagram" width="40" height="40">
+            </a>
+        </section>
+        <section class="anketaprozor">
+        <form method="post" action="kontaktsent.html" autocomplete="on" class="forma">
+            <h1 class="naslov">
+                Анкета за посетителите
+            </h1>
+
+            <section class="anketa">
+                <input type="hidden" name="receiver" value="joveskim@gmail.com">
+
+                <p>
+                    <label>Име*<br>
+                        <input name="Name" type="text" placeholder="Name" size="25" maxlength="30" autofocus required>
+                        <em>  пр: Мартин</em>
+                    </label>
+                </p>
+                <p>
+                    <label>Скратено име<br>
+                        <input name="Shortname" type="email" placeholder="Short name" size="25" maxlength="30">
+                        <em>  пр: Маки</em>
+                    </label>                   
+                </p>
+                <p>
+                    <label>Презиме*<br>
+                        <input name="Surename" type="text" placeholder="Surename" size="25" maxlength="30" required>
+                        <em>  пр: Јовески</em>
+                    </label>
+                </p>
+                <p>
+                    <label>E-маил*<br>
+                        <input name="Email" type="email" placeholder="Email" size="25" maxlength="30" required>
+                        <em>  пр: joveskim@gmail.com</em>
+                    </label>                   
+                </p>
+                <p>
+                    <label>Телефонски број*<br>
+                        <input name="tel" type="tel" pattern="\d{3} +\d{3} +\d{3}" placeholder="070 000 000" size="25" maxlength="30" required>
+                        <em>  пр: 070 000 000</em>
+                    </label>                   
+                </p>
+                <p>
+                    <label>Датум на раѓање*<br>
+                        <input name="bday" type="date" placeholder="17.07.1999" required>
+                        <em>  пр: 17.07.1999</em>
+                    </label>                   
+                </p>
+                <p style="color: gray; font-size: 15px;">
+                    * задолжително внесување на личните податоци
+                </p>
+                <hr>
+                <p>
+                    <label>1. Која е вашата омилена боја:*<br>
+                        <input name="color" type="color" required>
+                        <em>   притиснете на полето и одберете</em>
+                    </label>                   
+                </p>
+                <p>
+                    <label>2. Годишно колку пати одите на одмор:*<br>
+                        <input name="timesholiday" type="number" min="0" max="20" value="3" step="1" required>
+                        <em>   пр: 3</em>
+                    </label>                   
+                </p>
+                <p>3. Во кој месец најмногу патувате:*
+                    <input name="meseci" type="text" list="mesec" placeholder="Месец на патување" required>
+                    <datalist id="mesec">
+                        <option value="Јануари"></option>
+                        <option value="Февруари"></option>
+                        <option value="Март"></option>
+                        <option value="Април"></option>
+                        <option value="Мај"></option>
+                        <option value="Јуни"></option>
+                        <option value="Јули"></option>
+                        <option value="Август"></option>
+                        <option value="Септември"></option>
+                        <option value="Октомври"></option>
+                        <option value="Ноември"></option>
+                        <option value="Декември"></option>
+                    </datalist>
+                    <em>   пр: Август</em>
+                </p>
+                <p>
+                    <label>4. Која од следниве држави би ја одбрале за летен одмор:*<br>
+                        <ul>
+                            <li>Грција<input name="koja" type="radio" checked></li>
+                            <li>Турција<input name="koja" type="radio" ></li>
+                            <li>Албанија<input name="koja" type="radio" ></li>
+                            <li>Шпанија<input name="koja" type="radio" ></li>
+                            <li>Тунис<input name="koja" type="radio" ></li>
+                            <li>Египет<input name="koja" type="radio" ></li>
+                            <li>Друга<input name="koja" type="radio" ></li>
+                        </ul>
+                    </label>
+                </p>
+                <p>5. Доколку сте биле во Грција оценете ги местата со една оцена: <br>0
+                    <input name="ocena" type="range" min="1" max="10" step="1" value="5"> 10
+                </p>
+                <p>
+                    <label>6. Одберете ги сите места на кои што сте биле во Грција:<br>
+                        <ul>
+                            <li>Калитеа<input name="koi" type="checkbox" ></li>
+                            <li>Ханиоти<input name="koi" type="checkbox" ></li>
+                            <li>Лефкада<input name="koi" type="checkbox" ></li>
+                            <li>Крф<input name="koi" type="checkbox" ></li>
+                            <li>Паралиа Пантелемонас<input name="koi" type="checkbox" ></li>
+                            <li>Солун<input name="koi" type="checkbox" ></li>
+                            <li>Атина<input name="koi" type="checkbox" ></li>
+                            <li>Други<input name="koi" type="checkbox" ></li>
+                        </ul>
+                    </label>
+                </p>
+            </section>
+                <p style="padding-left: 30%">
+                    Датум на пополнување анкета:<br>
+                    <input type="datetime-local" required>
+                    <section style="padding-left: 40%">
+                        <input name="Submit" type="submit" >
+                        <input name="Clear" type="reset">
+                    </section>
+                </p>
+        </form>
+        </section>
+    </body>
+</html>

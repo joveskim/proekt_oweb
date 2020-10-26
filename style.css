@@ -1,6 +1,6 @@
 .mjheader {
     box-shadow: -4px 4px 10px 10px gray;
-    border-radius: 0.7cm;
+    border-radius: 0.1cm;
     width: auto;
     height: 120px;
 }
@@ -112,6 +112,7 @@ h2 {
 }
 
 nav {
+    position: absolute;
     font-size: 20px;
     border-radius: 0.2cm;
     font-weight: bold;
@@ -221,4 +222,91 @@ nav ul li:hover {
 .omilenislika2 a:hover, .omilenislika12 a:hover {
     color: #42cae2;
     text-decoration: none;
+}
+
+.kontaktbody {
+    background-color: rgb(207, 207, 207);
+}
+
+.divkontakt {
+    overflow: hidden;
+    padding-left: 12%;
+    padding-right: 12%;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.forma1 {
+    box-shadow: -4px 4px 10px 10px gray;
+    border-radius: 0.7cm;
+    width: auto;
+    background-color: white;
+    padding-left: 3%;
+    padding-top: 10px;
+    padding-right: 50px;
+    float: left;
+    overflow: hidden;
+}
+
+.forma2 {
+    box-shadow: -4px 4px 10px 10px gray;
+    border-radius: 0.7cm;
+    float: right;
+    background-color: white;
+    padding-left: 3%;
+    padding-top: 10px;
+    padding-right: 3%;
+}
+
+.kontaktf2 {
+    text-align: center;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.kontaktf3 {
+    text-decoration: none;
+    color: #1c5e69;
+}
+
+.kontaktf3:hover {
+    text-decoration: none;
+    color: #42c1d8;
+}
+
+.forma {
+    box-shadow: -4px 4px 10px 10px gray;
+    border-radius: 0.7cm;
+    width: auto;
+    background-color: white;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 10px;
+    overflow: hidden;
+}
+
+.anketaprozor {
+    padding-left: 25%;
+    padding-right: 25%;
+}
+
+.naslov {
+    text-align: center; 
+    font-size: 40px; 
+    padding-top: 15px; 
+    text-shadow: -1.5px 1.5px 1px rgb(88, 177, 228);
+}
+
+.naslov1 {
+    text-shadow: -1.5px 1.5px 3px rgb(88, 177, 228);
+}
+
+.anketa {
+    font-size: 18px;
+    padding-left: 10%;
+}
+
+.anketa em {
+    color: rgb(175, 175, 175);
+    font-size: 16px;
 }
