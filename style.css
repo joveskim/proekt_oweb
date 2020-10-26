@@ -1,0 +1,224 @@
+.mjheader {
+    box-shadow: -4px 4px 10px 10px gray;
+    border-radius: 0.7cm;
+    width: auto;
+    height: 120px;
+}
+
+.logo {
+    float: left;
+    margin-left: 2%;
+}
+
+.menu {
+    float: right;
+    margin-top: 40px;
+    margin-right: 60px;
+}
+
+.navheader a {
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: lighter;
+    color: black;
+    padding-left: 1%;
+    float: right;
+    margin-top: 45px;
+}
+
+.navheader a:hover {
+    color: #2d8797;
+}
+
+.social {
+    text-align: right;
+    padding-top: 10px;
+    padding-right: 10px;
+}
+
+.welcome {
+    color: #2d8797;
+    font-size: 70px;
+    font-family: consolas;
+    font-weight: 20;
+    text-align: center;
+}
+
+.introtext {
+    font-size: 25px;
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.div {
+    overflow: hidden;
+    padding-bottom: 30px;
+}
+
+.slikahome {
+    float: left;
+    padding-top: 100px;
+    padding-left: 10%;
+}
+
+.tekstslika {
+    float: right;
+    padding-top: 190px;
+    padding-bottom: 0;
+    padding-right: 14%;
+    font-size: 25px;
+    text-align: center;
+}
+
+.tekstslika1 {
+    float: right;
+    padding-right: 10%;
+    font-size: 25px;
+    text-align: center;
+}
+
+.tekstslika a {
+    font-size: 45px;
+    color: #2d8797;
+    text-decoration: none;
+}
+
+.tekstslika1 a{
+    font-size: 25px;
+    color: #2d8797;
+    text-decoration: none;    
+}
+
+.tekstslika a:hover, .tekstslika1 a:hover {
+    color: #42cae2;
+    text-decoration: none;
+}
+
+h2 {
+    font-size: 35px;
+    color: #2d8797;
+    text-decoration: none;
+    text-align: center;
+}
+
+.pozadina {
+    z-index: 1;
+}
+
+.textnaslika {
+    z-index: 2;
+}
+
+nav {
+    font-size: 20px;
+    border-radius: 0.2cm;
+    font-weight: bold;
+    color: white;
+    background-color: #2d8797;
+    text-align: center;
+    width: 15em;
+}
+
+nav:hover {
+    background-color: #175763;
+}
+
+nav ul {
+    display: none;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #2d8797;
+}
+
+nav:hover ul {
+    display: block;
+}
+
+nav ul li {
+    background-color: white;
+    color: white;
+}
+nav ul li:hover {
+    background-color:#42cae2;
+    color: white;
+}
+
+.meniomileni {
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+}
+
+.omilenislika {
+    float: right;
+    padding-top: 70px;
+    padding-bottom: 0;
+    padding-right: 10%;
+    font-size: 25px;
+    text-align: right;
+}
+
+.omilenislika1 {
+    float: right;
+    padding-right: 10%;
+    font-size: 25px;
+    text-align: right;
+}
+
+.omilenislika a {
+    font-size: 45px;
+    color: #2d8797;
+    text-decoration: none;
+}
+
+.omilenislika1 a{
+    font-size: 25px;
+    color: #2d8797;
+    text-decoration: none;    
+}
+
+.omilenislika a:hover, .omilenislika1 a:hover {
+    color: #42cae2;
+    text-decoration: none;
+}
+
+.slikahome2 {
+    float: right;
+    padding-top: 100px;
+    padding-right: 10%;
+}
+
+.omilenislika2 {
+    float: left;
+    padding-top: 70px;
+    padding-bottom: 0;
+    padding-left: 10%;
+    font-size: 25px;
+    text-align: left;
+}
+
+.omilenislika12 {
+    float: left;
+    padding-left: 10%;
+    font-size: 25px;
+    text-align: left;
+}
+
+.omilenislika2 a {
+    font-size: 45px;
+    color: #2d8797;
+    text-decoration: none;
+}
+
+.omilenislika12 a{
+    font-size: 25px;
+    color: #2d8797;
+    text-decoration: none;    
+}
+
+.omilenislika2 a:hover, .omilenislika12 a:hover {
+    color: #42cae2;
+    text-decoration: none;
+}
