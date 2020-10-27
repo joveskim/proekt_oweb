@@ -334,6 +334,10 @@ nav ul li:hover {
     font-size: 50px;
 }
 
+.instapp a:hover {
+    color: rgb(95, 203, 211);
+}
+
 .ppinsta {
     float: left;
     padding-top: 4%;
@@ -393,4 +397,34 @@ nav ul li:hover {
     position: absolute;
     padding-left: 3%;
     padding-top: 5px;
+}
+
+.katlinija {
+    background-color: teal;
+    border-radius: 2cm;
+    width: auto;
+}
+
+.slikahrana {
+    float: right;
+    padding-top: 50px;
+}
+
+.hranaslika {
+    position: absolute;
+    float: left;
+    font-size: 25px;
+    text-align: left;
+    padding-top: 50px;
+    padding-right: 40%;
+}
+
+.filmoviul a{
+    text-decoration: none;
+    color: black;
+    font-size: 23px;
+}
+
+.filmoviul a:hover {
+    color: rgb(31, 158, 158);
 }
