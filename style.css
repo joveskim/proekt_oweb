@@ -428,3 +428,58 @@ nav ul li:hover {
 .filmoviul a:hover {
     color: rgb(31, 158, 158);
 }
+
+.addslika{
+    text-decoration: none;
+    font-size: 15px;
+    color: white;
+    color: rgb(182, 182, 182);
+}
+
+.sportprozor {
+    padding-left: 25%;
+    padding-right: 25%;
+    font-size: 20px;
+    border-radius: 0.2cm;
+    font-weight: bold;
+    color: white;
+    background-color: #2d8797;
+    box-shadow: -4px 4px 10px 10px rgb(170, 170, 170);
+}
+
+.sportprozor:hover {
+    background-color: #175763;
+}
+
+.sportprozor .blogd {
+    display: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sportprozor:hover .blogd {
+    display: inline;
+}
+
+.naslovblog {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center; 
+    font-size: 40px; 
+}
+
+.blog {
+    padding-left: 3%;
+    padding-right: 10%;
+}
+
+.blogdd {
+    font-size: 18px;
+    padding-bottom: 30px;
+    padding-left: 70%;
+}
+
+.blogdd em {
+    color: rgb(175, 175, 175);
+    font-size: 16px;
+}
