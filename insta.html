@@ -5,9 +5,14 @@
         <meta charset="utf-8">
         <title>Галерија</title>
         <link rel="stylesheet" type="text/css" href="style.css">
+        <script type="text/javascript" src="java.js">
+        </script>
     </head>
 
     <body class="instabody">
+        <script type="text/javascript">
+            var ime = window.prompt("Внесете го вашиот username: ");
+        </script>
         <header>
             <section class="mjheaderinsta" style="background-color: white;">
                 <p class="logo">
@@ -19,9 +24,9 @@
                     <input type="search" placeholder="Search">
                 </section> 
                 <section class="menu">
-                    <img src="images/menu.png" alt="menu" width="40px" height="30px">
+                    <img onclick="klik('navigacija')" src="images/menu.png" alt="menu" width="40px" height="30px" style="cursor: pointer;">
                 </section>
-                <section class="navheader">
+                <section class="navheader", id="navigacija">
                     <a href="kontakt.html" style="margin-right: 50px;">Контакт</a>
                     <a href="anketa.html">Анкета за посетителите</a>
                     <a href="blog.html">Блог</a>
@@ -71,15 +76,18 @@
             </h1>
         </div>
 
+        
         <section class="instaprozor">
             <div style="position: absolute;  padding-left: 43%; padding-top: 15px;">
-                <input type="image" src="images/add.svg" alt="add_button" width="40" height="40" style="padding-left: 10px;">
-                
+                <input type="file"  accept="image/*" name="image" id="file"  onchange="load(event)" style="display: none;">
+                <label for="file" style="cursor: pointer;"><img src="images/add.svg" alt="add_button" width="40" height="40" style="padding-left: 10px;"></label>
+
                 <section class="addslika">
                     add image
                 </section>                
             </div>
             <section class="instasliki">
+                <section id="newimage"></section>
                 <!--SLIKA1-->
                 <section style="padding-top: 30px;">
                     <section>
@@ -94,20 +102,23 @@
                         </p>
                         <section style="overflow: hidden;">
                             <section class="comment">
-                                <input type="text" placeholder="Comment...">
+                                <input id="shto1" type="text" placeholder="Comment...">
+                                <button onclick="comment('komentar1', 'shto1')" type="button">Send</button>
                             </section>
-                            <input type="image" src="images/like.png" width="30" height="30">                        
-                        </section   >
-                        <section style="color: white; padding-top: 5px;">
-                            2.1k likes
+                            <section class="like">
+                                <input onclick="likes('kade')" type="image" src="images/like.png" width="30" height="30" style="z-index: 2;">  
+                            </section> 
+                            <br><br>                
                         </section>
+                        <section id="kade" style="color: white; padding-top: 5px;"></section>
                         <section style="padding-top: 5px;">
                             <details>
-                                <summary style="color: rgb(107, 107, 107);">View all 3 comments...</summary>
+                                <summary style="color: rgb(107, 107, 107);">View all comments...</summary>
                                 <ul style="color: white;">
                                     <li>ajoveska: Lele bato najubav si</li>
                                     <li>mihaela: &lt3</li>
                                     <li>joveskim: &lt3</li>
+                                    <div id="komentar1"></div>
                                 </ul>
                             </details>
                         </section>
@@ -130,19 +141,22 @@
                         </p>
                         <section style="overflow: hidden;">
                             <section class="comment">
-                                <input type="text" placeholder="Comment...">
+                                <input id="shto2" type="text" placeholder="Comment...">
+                                <button onclick="comment('komentar2', 'shto2')" type="button">Send</button>
                             </section>
-                            <input type="image" src="images/like.png" width="30" height="30">                        
-                        </section   >
-                        <section style="color: white; padding-top: 5px;">
-                            3k likes
+                            <section class="like">
+                                <input onclick="likes('kade2')" type="image" src="images/like.png" width="30" height="30" style="z-index: 2;">  
+                            </section> 
+                            <br><br>                
                         </section>
+                        <section id="kade2" style="color: white; padding-top: 5px;"></section>
                         <section style="padding-top: 5px;">
                             <details>
-                                <summary style="color: rgb(107, 107, 107);">View all 2 comments...</summary>
+                                <summary style="color: rgb(107, 107, 107);">View all comments...</summary>
                                 <ul style="color: white;">
                                     <li>stefan: &lt3</li>
                                     <li>joveskim: &lt3</li>
+                                    <div id="komentar2"></div>
                                 </ul>
                             </details>
                         </section>
@@ -165,19 +179,22 @@
                         </p>
                         <section style="overflow: hidden;">
                             <section class="comment">
-                                <input type="text" placeholder="Comment...">
+                                <input id="shto3" type="text" placeholder="Comment...">
+                                <button onclick="comment('komentar3', 'shto3')" type="button">Send</button>
                             </section>
-                            <input type="image" src="images/like.png" width="30" height="30">                        
-                        </section   >
-                        <section style="color: white; padding-top: 5px;">
-                            1.9k likes
+                            <section class="like">
+                                <input onclick="likes('kade3')" type="image" src="images/like.png" width="30" height="30" style="z-index: 2;">  
+                            </section> 
+                            <br><br>                
                         </section>
+                        <section id="kade3" style="color: white; padding-top: 5px;"></section>
                         <section style="padding-top: 5px;">
                             <details>
-                                <summary style="color: rgb(107, 107, 107);">View all 2 comments...</summary>
+                                <summary style="color: rgb(107, 107, 107);">View all comments...</summary>
                                 <ul style="color: white;">
                                     <li>ajoveska: &lt3</li>
                                     <li>joveskim: &lt3</li>
+                                    <div id="komentar3"></div>
                                 </ul>
                             </details>
                         </section>
@@ -200,19 +217,22 @@
                         </p>
                         <section style="overflow: hidden;">
                             <section class="comment">
-                                <input type="text" placeholder="Comment...">
+                                <input id="shto4" type="text" placeholder="Comment...">
+                                <button onclick="comment('komentar4', 'shto4')" type="button">Send</button>
                             </section>
-                            <input type="image" src="images/like.png" width="30" height="30">                        
-                        </section   >
-                        <section style="color: white; padding-top: 5px;">
-                            2.7k likes
+                            <section class="like">
+                                <input onclick="likes('kade4')" type="image" src="images/like.png" width="30" height="30" style="z-index: 2;">  
+                            </section> 
+                            <br><br>                
                         </section>
+                        <section id="kade4" style="color: white; padding-top: 5px;"></section>
                         <section style="padding-top: 5px;">
                             <details>
-                                <summary style="color: rgb(107, 107, 107);">View all 2 comments...</summary>
+                                <summary style="color: rgb(107, 107, 107);">View all comments...</summary>
                                 <ul style="color: white;">
                                     <li>mihaela: &lt3</li>
                                     <li>joveskim: &lt3</li>
+                                    <div id="komentar4"></div>
                                 </ul>
                             </details>
                         </section>
@@ -235,19 +255,22 @@
                         </p>
                         <section style="overflow: hidden;">
                             <section class="comment">
-                                <input type="text" placeholder="Comment...">
+                                <input id="shto5" type="text" placeholder="Comment...">
+                                <button onclick="comment('komentar5', 'shto5')" type="button">Send</button>
                             </section>
-                            <input type="image" src="images/like.png" width="30" height="30">                        
-                        </section   >
-                        <section style="color: white; padding-top: 5px;">
-                            2.1k likes
+                            <section class="like">
+                                <input onclick="likes('kade5')" type="image" src="images/like.png" width="30" height="30" style="z-index: 2;">  
+                            </section> 
+                            <br><br>                
                         </section>
+                        <section id="kade5" style="color: white; padding-top: 5px;"></section>
                         <section style="padding-top: 5px;">
                             <details>
-                                <summary style="color: rgb(107, 107, 107);">View all 2 comments...</summary>
+                                <summary style="color: rgb(107, 107, 107);">View all comments...</summary>
                                 <ul style="color: white;">
                                     <li>dimi: &lt3</li>
                                     <li>joveskim: &lt3</li>
+                                    <div id="komentar5"></div>
                                 </ul>
                             </details>
                         </section>
@@ -270,19 +293,22 @@
                         </p>
                         <section style="overflow: hidden;">
                             <section class="comment">
-                                <input type="text" placeholder="Comment...">
+                                <input id="shto6" type="text" placeholder="Comment...">
+                                <button onclick="comment('komentar6', 'shto6')" type="button">Send</button>
                             </section>
-                            <input type="image" src="images/like.png" width="30" height="30">                        
-                        </section   >
-                        <section style="color: white; padding-top: 5px;">
-                            2.4k likes
+                            <section class="like">
+                                <input onclick="likes('kade6')" type="image" src="images/like.png" width="30" height="30" style="z-index: 2;">  
+                            </section> 
+                            <br><br>                
                         </section>
+                        <section id="kade6" style="color: white; padding-top: 5px;"></section>
                         <section style="padding-top: 5px;">
                             <details>
-                                <summary style="color: rgb(107, 107, 107);">View all 2 comments...</summary>
+                                <summary style="color: rgb(107, 107, 107);">View all comments...</summary>
                                 <ul style="color: white;">
                                     <li>stefan: &lt3</li>
                                     <li>joveskim: &lt3</li>
+                                    <div id="komentar6"></div>
                                 </ul>
                             </details>
                         </section>

@@ -5,6 +5,8 @@
         <meta charset="utf-8">
         <title>Анкета</title>
         <link rel="stylesheet" type="text/css" href="style.css">
+        <script type="text/javascript" src="java.js">
+        </script>
     </head>
 
     <body class="kontaktbody">
@@ -19,9 +21,9 @@
                     <input type="search" placeholder="Search">
                 </section> 
                 <section class="menu">
-                    <img src="images/menu.png" alt="menu" width="40px" height="30px">
+                    <img onclick="klik('navigacija')" src="images/menu.png" alt="menu" width="40px" height="30px" style="cursor: pointer;">
                 </section>
-                <section class="navheader">
+                <section class="navheader", id="navigacija">
                     <a href="kontakt.html" style="margin-right: 50px;">Контакт</a>
                     <a href="anketa.html">Анкета за посетителите</a>
                     <a href="blog.html">Блог</a>

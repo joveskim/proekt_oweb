@@ -3,12 +3,13 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Контакт</title>
+        <title>Блог</title>
         <link rel="stylesheet" type="text/css" href="style.css">
+        <script type="text/javascript" src="java.js"></script> 
     </head>
 
     <body class="blogbody">
-        <header>
+        <header id="myHeader">
             <section class="mjheader" style="background-color: white;">
                 <p class="logo">
                     <a href="doma.html">
@@ -19,9 +20,9 @@
                     <input type="search" placeholder="Search">
                 </section> 
                 <section class="menu">
-                    <img src="images/menu.png" alt="menu" width="40px" height="30px">
+                    <img onclick="klik('navigacija')" src="images/menu.png" alt="menu" width="40px" height="30px" style="cursor: pointer;">
                 </section>
-                <section class="navheader">
+                <section class="navheader", id="navigacija">
                     <a href="kontakt.html" style="margin-right: 50px;">Контакт</a>
                     <a href="anketa.html">Анкета за посетителите</a>
                     <a href="blog.html">Блог</a>
@@ -44,19 +45,20 @@
         <section class="blog">
             <section class="sportprozor">
                 <section>
-                    <h1 class="naslovblog">
+                    <h1 class="naslovblog" onclick="klik('shtosport')">
                         Спорт
                     </h1>
-                    <form method="post" action="anketasent.html" class="blogd">
+                    <div class="blogd" id="shtosport">
+                        <div id="sportdiv"></div>
                         <div style="position: absolute;  padding-top: 15px;">
-                            <input type="image" src="images/add.svg" alt="add_button" width="40" height="40" style="padding-left: 13px;">
+                            <input type="image" onclick="blog('sportdiv','naslovsport', 'imesport', 'prezimesport',' emailsport', 'textsport')" src="images/add.svg" alt="add_button" width="40" height="40" style="padding-left: 13px;">
                             
                             <section class="addslika">
                                 add article
                             </section> 
                             
                             <label><br><br><br><br>Наслов на темата:*<br>
-                                <input name="Naslov" type="text" placeholder="Name of the article" size="25" maxlength="50" required>
+                                <input id="naslovsport" name="Naslov" type="text" placeholder="Name of the article" size="25" maxlength="50" required>
                             </label>
                         </div>
                         <section class="blogdd">
@@ -65,44 +67,46 @@
         
                             <p>
                                 <label>Име*<br>
-                                    <input name="Name" type="text" placeholder="Name" size="25" maxlength="30" autofocus required>
+                                    <input id="imesport" name="Name" type="text" placeholder="Name" size="25" maxlength="30" autofocus required>
                                     <em>  пр: Мартин</em>
                                 </label>
                             </p>
                             <p>
                                 <label>Презиме*<br>
-                                    <input name="Surename" type="text" placeholder="Surename" size="25" maxlength="30" autofocus required>
+                                    <input id="prezimesport" name="Surename" type="text" placeholder="Surename" size="25" maxlength="30" autofocus required>
                                     <em>  пр: Јовески</em>
                                 </label>
                             </p>
                             <p>
                                 <label>E-маил*<br>
-                                    <input name="Email" type="email" placeholder="Email" size="25" maxlength="30" required>
+                                    <input id="emailsport" name="Email" type="email" placeholder="Email" size="25" maxlength="30" required>
                                     <em>  пр: joveskim@gmail.com</em>
                                 </label>                   
                             </p>
                         </section>
                         <label>Коментар*<br><br>
-                            <textarea name="Comment" rows="15" cols="100" placeholder="Your comment" required style="padding-bottom: 30px;"></textarea>
-                        </label>                        
-                    </form>  
+                            <textarea id="textsport" name="Comment" rows="15" cols="100" placeholder="Your comment" required style="padding-bottom: 30px;"></textarea>
+                        </label>  
+                                           
+                    </div>  
                 </section>
             </section>
             <section class="sportprozor">
                 <section>
-                    <h1 class="naslovblog">
+                    <h1 class="naslovblog" onclick="klik('shtopatu')">
                         Патување
                     </h1>
-                    <form method="post" action="anketasent.html" class="blogd">
+                    <div class="blogd" id="shtopatu">
+                        <div id="patudiv"></div>
                         <div style="position: absolute;  padding-top: 15px;">
-                            <input type="image" src="images/add.svg" alt="add_button" width="40" height="40" style="padding-left: 13px;">
+                            <input type="image" onclick="blog('patudiv','naslovpatu', 'imepatu', 'prezimepatu',' emailpatu', 'textpatu')" src="images/add.svg" alt="add_button" width="40" height="40" style="padding-left: 13px;">
                             
                             <section class="addslika">
                                 add article
                             </section> 
                             
                             <label><br><br><br><br>Наслов на темата:*<br>
-                                <input name="Naslov" type="text" placeholder="Name of the article" size="25" maxlength="50" required>
+                                <input id="naslovpatu" name="Naslov" type="text" placeholder="Name of the article" size="25" maxlength="50" required>
                             </label>
                         </div>
                         <section class="blogdd">
@@ -111,44 +115,46 @@
         
                             <p>
                                 <label>Име*<br>
-                                    <input name="Name" type="text" placeholder="Name" size="25" maxlength="30" autofocus required>
+                                    <input id="imepatu" name="Name" type="text" placeholder="Name" size="25" maxlength="30" autofocus required>
                                     <em>  пр: Мартин</em>
                                 </label>
                             </p>
                             <p>
                                 <label>Презиме*<br>
-                                    <input name="Surename" type="text" placeholder="Surename" size="25" maxlength="30" autofocus required>
+                                    <input id="prezimepatu" name="Surename" type="text" placeholder="Surename" size="25" maxlength="30" autofocus required>
                                     <em>  пр: Јовески</em>
                                 </label>
                             </p>
                             <p>
                                 <label>E-маил*<br>
-                                    <input name="Email" type="email" placeholder="Email" size="25" maxlength="30" required>
+                                    <input id="emailpatu" name="Email" type="email" placeholder="Email" size="25" maxlength="30" required>
                                     <em>  пр: joveskim@gmail.com</em>
                                 </label>                   
                             </p>
                         </section>
                         <label>Коментар*<br><br>
-                            <textarea name="Comment" rows="15" cols="100" placeholder="Your comment" required style="padding-bottom: 30px;"></textarea>
-                        </label>                        
-                    </form>  
+                            <textarea id="textpatu" name="Comment" rows="15" cols="100" placeholder="Your comment" required style="padding-bottom: 30px;"></textarea>
+                        </label>  
+                                           
+                    </div>   
                 </section>
             </section>
             <section class="sportprozor">
                 <section>
-                    <h1 class="naslovblog">
+                    <h1 class="naslovblog" onclick="klik('shtohrana')">
                         Храна
                     </h1>
-                    <form method="post" action="anketasent.html" class="blogd">
+                    <div class="blogd" id="shtohrana">
+                        <div id="hranadiv"></div>
                         <div style="position: absolute;  padding-top: 15px;">
-                            <input type="image" src="images/add.svg" alt="add_button" width="40" height="40" style="padding-left: 13px;">
+                            <input type="image" onclick="blog('hranadiv','naslovhrana', 'imehrana', 'prezimehrana',' emailhrana', 'texthrana')" src="images/add.svg" alt="add_button" width="40" height="40" style="padding-left: 13px;">
                             
                             <section class="addslika">
                                 add article
                             </section> 
                             
                             <label><br><br><br><br>Наслов на темата:*<br>
-                                <input name="Naslov" type="text" placeholder="Name of the article" size="25" maxlength="50" required>
+                                <input id="naslovhrana" name="Naslov" type="text" placeholder="Name of the article" size="25" maxlength="50" required>
                             </label>
                         </div>
                         <section class="blogdd">
@@ -157,27 +163,28 @@
         
                             <p>
                                 <label>Име*<br>
-                                    <input name="Name" type="text" placeholder="Name" size="25" maxlength="30" autofocus required>
+                                    <input id="imehrana" name="Name" type="text" placeholder="Name" size="25" maxlength="30" autofocus required>
                                     <em>  пр: Мартин</em>
                                 </label>
                             </p>
                             <p>
                                 <label>Презиме*<br>
-                                    <input name="Surename" type="text" placeholder="Surename" size="25" maxlength="30" autofocus required>
+                                    <input id="prezimehrana" name="Surename" type="text" placeholder="Surename" size="25" maxlength="30" autofocus required>
                                     <em>  пр: Јовески</em>
                                 </label>
                             </p>
                             <p>
                                 <label>E-маил*<br>
-                                    <input name="Email" type="email" placeholder="Email" size="25" maxlength="30" required>
+                                    <input id="emailhrana" name="Email" type="email" placeholder="Email" size="25" maxlength="30" required>
                                     <em>  пр: joveskim@gmail.com</em>
                                 </label>                   
                             </p>
                         </section>
                         <label>Коментар*<br><br>
-                            <textarea name="Comment" rows="15" cols="100" placeholder="Your comment" required style="padding-bottom: 30px;"></textarea>
-                        </label>                        
-                    </form>  
+                            <textarea id="texthrana" name="Comment" rows="15" cols="100" placeholder="Your comment" required style="padding-bottom: 30px;"></textarea>
+                        </label>  
+                                           
+                    </div>   
                 </section>
             </section>
         </section>

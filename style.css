@@ -16,6 +16,10 @@
     margin-right: 60px;
 }
 
+.navheader{
+    display: none;
+}
+
 .navheader a {
     font-weight: bold;
     text-decoration: none;
@@ -394,9 +398,15 @@ nav ul li:hover {
 }
 
 .comment {
+    overflow: auto;
     position: absolute;
     padding-left: 3%;
     padding-top: 5px;
+}
+
+.like {
+    overflow: hidden;
+    position: absolute;
 }
 
 .katlinija {
@@ -447,30 +457,20 @@ nav ul li:hover {
     box-shadow: -4px 4px 10px 10px rgb(228, 228, 228);
 }
 
-.sportprozor:hover {
-    background-color: #175763;
-}
-
-.sportprozor .blogd {
-    display: none;
-    margin: 0;
-    padding: 0;
-}
-
-.sportprozor:hover .blogd {
-    display: inline;
-}
-
 .naslovblog {
     padding-top: 20px;
     padding-bottom: 20px;
     text-align: center; 
-    font-size: 40px; 
+    font-size: 40px;
 }
 
 .blog {
     padding-left: 3%;
     padding-right: 10%;
+}
+
+.blogd {
+    display: none;
 }
 
 .blogdd {
@@ -487,3 +487,17 @@ nav ul li:hover {
 .blogbody {
     background-color: rgb(255, 255, 255);
 }
+
+.content {
+    padding: 16px;
+  }
+  
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  .sticky + .content {
+    padding-top: 102px;
+  }
