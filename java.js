@@ -19,16 +19,14 @@ function klik(shtoklik) {
     }
 }
 
-var count = 0;
-function likes(kade){
-    count++;
-    document.getElementById(kade).innerHTML = count + " likes";
-}
-
-function comment(kade, komentar){
-    var koj = ime;
-    var kom = document.getElementById(komentar).value;
-    document.getElementById(kade).innerHTML = "<li>"+koj+": "+kom+"</li>";
+var count = [];
+var n;
+function likes(kade, n){
+    if(count[n] == null){
+        count[n] = 0;
+    }
+    count[n]++;
+    document.getElementById(kade).innerHTML = count[n] + " likes";
 }
             
 function load(event){
@@ -67,18 +65,21 @@ function load(event){
                         "<hr class='hr'>"+
                     "</p>"+
                 "</section>"
-    var commentb = document.getElementById( 'commentb' ); 
-    commentb.addEventListener( 'click', comment('komentarnew', 'shtonew'), {
-        once: false,
-        passive: false,
-        capture: false
-        });
-    var likeb = document.getElementById( 'likeb' ); 
-    likeb.addEventListener( 'click', likes('kadenew'), {
-        once: true,
-        passive: true,
-        capture: true
-        });
     var image = document.getElementById('output');
     image.src = URL.createObjectURL(event.target.files[0]);
+}
+
+
+var niza = [];
+var n;
+function comment(kade, komentar, n){
+    var koj = ime;
+    var kom = document.getElementById(komentar).value;
+    var nov = "<li>"+koj+": "+kom+"</li>";
+    if(niza[n] == null){
+        niza[n] = 0;
+    }
+    niza[n]++;
+    var exit = kade + niza[n];
+    document.getElementById(exit).innerHTML = nov;
 }
