@@ -70,16 +70,12 @@ function load(event){
 }
 
 
-var niza = [];
+var komentari = "";
 var n;
-function comment(kade, komentar, n){
+function comment(kade, komentar){
     var koj = ime;
     var kom = document.getElementById(komentar).value;
-    var nov = "<li>"+koj+": "+kom+"</li>";
-    if(niza[n] == null){
-        niza[n] = 0;
-    }
-    niza[n]++;
-    var exit = kade + niza[n];
-    document.getElementById(exit).innerHTML = nov;
+    kom.value = "";
+    komentari += "<li>"+koj+": "+kom+"</li>";
+    document.getElementById(kade).innerHTML = komentari;
 }
