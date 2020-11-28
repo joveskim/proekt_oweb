@@ -70,12 +70,15 @@ function load(event){
 }
 
 
-var komentari = "";
+var komentari = [];
 var n;
-function comment(kade, komentar){
+function comment(kade, komentar, n){
     var koj = ime;
     var kom = document.getElementById(komentar).value;
-    kom.value = "";
-    komentari += "<li>"+koj+": "+kom+"</li>";
-    document.getElementById(kade).innerHTML = komentari;
+    document.getElementById(komentar).value = "";
+    if (komentari[n] == null){
+        komentari[n] = "";
+    }
+    komentari[n] += "<li>"+koj+": "+kom+"</li>";
+    document.getElementById(kade).innerHTML = komentari[n];
 }
