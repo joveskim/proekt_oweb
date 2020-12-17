@@ -74,12 +74,16 @@ function klik() {
     }
 }
 
-function click(shtoklik) {
+var pompom = 0;
+function click(shtoklik){
+    console.log("vlaga");
     var x = document.getElementById(shtoklik);
-    if (x.style.display === "none") {
-        x.style.display = "block";
+    if (pompom == 0) {
+        x.setAttribute("style", "display: block");
+        pompom++;
     } else {
-        x.style.display = "none";
+        x.setAttribute("style", "display: none");
+        pompom = 0;
     }
 }
 
@@ -212,7 +216,7 @@ function comment(kade, komentar, m){
     document.getElementById(komentar).value = "";
     
     var stotka = m*100;
-    var komBR = stotka + komentari[m];
+    var komBR = parseInt(stotka + komentari[m]);
     komentari[m]++;
     
     var com = document.createElement("LI");
@@ -220,7 +224,9 @@ function comment(kade, komentar, m){
     
     var comz = koj + ": " + kom;
     
+    console.log("m = "+m+" => "+komentari[m]);
     sessionStorage.setItem(m, komentari[m]);
+    console.log("komBR = "+komBR+" => "+comz);
     sessionStorage.setItem(komBR, comz);
     
     document.getElementById(kade).append(com);
@@ -230,12 +236,8 @@ var k;
 function deleteComment(k, m){
     console.log("Deleting from picture "+m+", on position "+k)
     sessionStorage.removeItem(k);
-    $(document).ready(function(){
-        $("#"+k).click(function(){
-          $(this).hide();
-        });
-    });
-    // window.location.reload();
+    
+    window.location.reload();
 }
 
 var n;
