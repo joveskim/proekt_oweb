@@ -9,7 +9,7 @@
         </script>
     </head>
 
-    <body class="kontaktbody">
+    <body class="kontaktbody" onload="start()">
         <header>
             <section class="mjheader" style="background-color: white;">
                 <p class="logo">
@@ -18,7 +18,7 @@
                     </a>
                 </p>
                 <section class="menu">
-                    <img onclick="klik('navigacija')" src="images/menu.png" alt="menu" width="40px" height="30px" style="cursor: pointer;">
+                    <img onclick="klik()" src="images/menu.png" alt="menu" width="40px" height="30px" style="cursor: pointer;">
                 </section>
                 <section class="navheader", id="navigacija">
                     <a href="kontakt.html" style="margin-right: 50px;">Контакт</a>
@@ -30,6 +30,11 @@
                 </section>
             </section>
         </header>
+        
+        <section class="dark">
+            <img id="ChangeColor" class="turnOn" onclick="DarkMode()" src="images/turnOff.svg" alt="Dark Mode off" width="auto" height="85px">
+            <p style="padding-top: 8px;">Dark Mode </p>
+        </section>
 
         <section class="social">
             <a href="https://www.facebook.com/macedonian.imperator">

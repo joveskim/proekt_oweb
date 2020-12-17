@@ -1,3 +1,55 @@
+var komentari = [];
+var count = [];
+sessionStorage.ime = "";
+
+function start(){
+    if(sessionStorage.boja == "1"){
+        document.getElementsByTagName("BODY")[0].style.backgroundColor = "rgb(48, 48, 48)";
+        document.getElementsByClassName("mjheader")[0].style.backgroundColor = "white";
+        document.getElementsByClassName("mjheader")[0].style.boxShadow = "-4px 4px 10px 10px black";
+        var p = document.getElementsByTagName("p");
+        for(i=0; i<p.length; i++){
+            p[i].style.color = "lightgray";
+        }
+        document.getElementById("ChangeColor").src = "images/turnOn.svg";
+    }
+    else{
+        sessionStorage.setItem("boja", "0");
+    }
+
+    if(sessionStorage.nav == "block"){
+        x = document.getElementById("navigacija");
+        x.style.display = "block";
+    }
+    else{
+        sessionStorage.setItem("nav", "none");
+    }
+}
+function DarkMode(){
+    var boja = sessionStorage.getItem("boja");
+    if(boja == "0"){
+        document.getElementsByTagName("BODY")[0].style.backgroundColor = "rgb(48, 48, 48)";
+        document.getElementsByClassName("mjheader")[0].style.backgroundColor = "white";
+        document.getElementsByClassName("mjheader")[0].style.boxShadow = "-4px 4px 10px 10px black";
+        var p = document.getElementsByTagName("p");
+        for(i=0; i<p.length; i++){
+            p[i].style.color = "lightgray";
+        }
+        document.getElementById("ChangeColor").src = "images/turnOn.svg";
+        sessionStorage.setItem("boja", "1");
+    }
+    else{
+        document.body.style.backgroundColor = "white";
+        document.getElementsByClassName("mjheader")[0].style.boxShadow = "-4px 4px 10px 10px gray";
+        var p = document.getElementsByTagName("p");
+        for(i=0; i<p.length; i++){
+            p[i].style.color = "black";
+        }
+        document.getElementById("ChangeColor").src = "images/turnOff.svg";
+        sessionStorage.setItem("boja", "0");
+    }
+}
+
 function blog(kade, naslov, ime, prezime, email, text) {
     var currentTime = new Date ( );
     var a = document.getElementById(naslov).value;
@@ -10,7 +62,19 @@ function blog(kade, naslov, ime, prezime, email, text) {
     document.getElementById(kade).innerHTML = naslovin + koj + content + "<hr style='color: white';>";
 }
 
-function klik(shtoklik) {
+function klik() {
+    var nav = sessionStorage.getItem("nav") 
+    x = document.getElementById("navigacija");
+    if (nav == "none") {
+        x.style.display = "block";
+        sessionStorage.setItem("nav", "block");
+    } else {
+        x.style.display = "none";
+        sessionStorage.setItem("nav", "none");
+    }
+}
+
+function click(shtoklik) {
     var x = document.getElementById(shtoklik);
     if (x.style.display === "none") {
         x.style.display = "block";
@@ -19,15 +83,6 @@ function klik(shtoklik) {
     }
 }
 
-var count = [];
-var n;
-function likes(kade, n){
-    if(count[n] == null){
-        count[n] = 0;
-    }
-    count[n]++;
-    document.getElementById(kade).innerHTML = count[n] + " likes";
-}
             
 function load(event){
     document.getElementById('newimage').innerHTML = "<section style='padding-top: 30px;'>"+
@@ -69,16 +124,126 @@ function load(event){
     image.src = URL.createObjectURL(event.target.files[0]);
 }
 
-
-var komentari = [];
-var n;
-function comment(kade, komentar, n){
-    var koj = ime;
-    var kom = document.getElementById(komentar).value;
-    document.getElementById(komentar).value = "";
-    if (komentari[n] == null){
-        komentari[n] = "";
+function startinsta(){
+    if(sessionStorage.boja == "1"){
+        document.getElementsByTagName("BODY")[0].style.backgroundColor = "rgb(48, 48, 48)";
+        document.getElementsByClassName("mjheader")[0].style.backgroundColor = "white";
+        document.getElementsByClassName("mjheader")[0].style.boxShadow = "-4px 4px 10px 10px black";
+        document.getElementById("martinID").style.color = "white";
+        document.getElementById("martinID2").style.color = "white";
+        var p = document.getElementsByTagName("p");
+        for(i=0; i<p.length; i++){
+            p[i].style.color = "lightgray";
+        }
+        document.getElementById("ChangeColor").src = "images/turnOn.svg";
     }
-    komentari[n] += "<li>"+koj+": "+kom+"</li>";
-    document.getElementById(kade).innerHTML = komentari[n];
+    else{
+        sessionStorage.setItem("boja", "0");
+    }
+
+    if(sessionStorage.nav == "block"){
+        x = document.getElementById("navigacija");
+        x.style.display = "block";
+    }
+    else{
+        sessionStorage.setItem("nav", "none");
+    }
+
+    for(var i=1; i<=6; i++){
+        if(sessionStorage.getItem(i) != null){
+            for(var j=0; j<sessionStorage.getItem(i); j++){
+                if(sessionStorage.getItem(i*100+j) != null){
+                    var kadeStart = "komentar" + i;
+                    var comzStart = sessionStorage.getItem(i*100+j);
+                    var com = document.createElement("LI");
+                    com.innerHTML = comzStart+"<img id="+(i*100+j)+" src='images/deleteComment.svg' onclick='deleteComment("+(i*100+j)+")' alt='Delete Comment' width='auto' height='30px'>";
+                    document.getElementById(kadeStart).append(com);
+                }
+            }
+            komentari[i] = sessionStorage.getItem(i);
+        }
+    }
+
+    for(var i=1; i<=6; i++){
+        if(sessionStorage.getItem(i+10000) != null){
+            count[i] = sessionStorage.getItem(10000+i);
+            var kadeLikes = "kade" + i;
+            document.getElementById(kadeLikes).innerHTML = count[i]+" likes";
+        }
+    }
+}
+function DarkModeinsta(){
+    var boja = sessionStorage.getItem("boja");
+    if(boja == "0"){
+        document.getElementsByTagName("BODY")[0].style.backgroundColor = "rgb(48, 48, 48)";
+        document.getElementsByClassName("mjheader")[0].style.backgroundColor = "white";
+        document.getElementsByClassName("mjheader")[0].style.boxShadow = "-4px 4px 10px 10px black";
+        document.getElementById("martinID").style.color = "white";
+        document.getElementById("martinID2").style.color = "white";
+        var p = document.getElementsByTagName("p");
+        for(i=0; i<p.length; i++){
+            p[i].style.color = "lightgray";
+        }
+        document.getElementById("ChangeColor").src = "images/turnOn.svg";
+        sessionStorage.setItem("boja", "1");
+    }
+    else{
+        document.body.style.backgroundColor = "white";
+        document.getElementsByClassName("mjheader")[0].style.boxShadow = "-4px 4px 10px 10px gray";
+        document.getElementById("martinID").style.color = "black";
+        document.getElementById("martinID2").style.color = "black";
+        var p = document.getElementsByTagName("p");
+        for(i=0; i<p.length; i++){
+            p[i].style.color = "black";
+        }
+        document.getElementById("ChangeColor").src = "images/turnOff.svg";
+        sessionStorage.setItem("boja", "0");
+    }
+}
+
+var m;
+function comment(kade, komentar, m){
+    if(komentari[m] == null){
+        komentari[m] = 0;
+    }
+    var koj = sessionStorage.ime;
+    var kom = document.getElementById(komentar).value;
+    
+    document.getElementById(komentar).value = "";
+    
+    var stotka = m*100;
+    var komBR = stotka + komentari[m];
+    komentari[m]++;
+    
+    var com = document.createElement("LI");
+    com.innerHTML = koj + ": " + kom + "<img id="+komBR+" src='images/deleteComment.svg' onclick='deleteComment("+komBR+", "+m+")' alt='Delete Comment' width='auto' height='30px'>";
+    
+    var comz = koj + ": " + kom;
+    
+    sessionStorage.setItem(m, komentari[m]);
+    sessionStorage.setItem(komBR, comz);
+    
+    document.getElementById(kade).append(com);
+}
+
+var k;
+function deleteComment(k, m){
+    console.log("Deleting from picture "+m+", on position "+k)
+    sessionStorage.removeItem(k);
+    $(document).ready(function(){
+        $("#"+k).click(function(){
+          $(this).hide();
+        });
+    });
+    // window.location.reload();
+}
+
+var n;
+function likes(kade, n){
+    if(count[n] == null){
+        count[n] = 0;
+    }
+    count[n]++;
+    sessionStorage.setItem(10000+n, count[n]);
+    document.getElementById(kade).innerHTML = count[n] + " likes";
 }
